@@ -60,7 +60,7 @@ export default function ShareCard({ result, onClose }: { result: AnalysisResult;
         ctx.fillStyle = '#ffffff';
         ctx.font = 'bold 48px "Microsoft Sans Serif", sans-serif';
         ctx.fillText('RepoDNA', 80, 120);
-        ctx.fillText('2024', 920, 120);
+        ctx.fillText(new Date().getFullYear().toString(), 920, 120);
 
         // Header Block (Avatar + Info)
         if (img.complete && img.naturalWidth > 0) {
@@ -207,7 +207,7 @@ export default function ShareCard({ result, onClose }: { result: AnalysisResult;
 
                         <div style={styles.pcHeader}>
                             <span style={styles.pcLogo}>RepoDNA</span>
-                            <span style={styles.pcYear}>2024</span>
+                            <span style={styles.pcYear}>{new Date().getFullYear()}</span>
                         </div>
 
                         <div style={styles.pcTitleHeader}>
